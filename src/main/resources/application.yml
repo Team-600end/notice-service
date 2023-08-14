@@ -17,5 +17,3 @@ management:
     web:
       exposure:
         include: "*"
-  main:
-    allow-bean-definition-overriding: true
