@@ -2,12 +2,20 @@ server:
   port: 8083
 
 spring:
+  application:
+    name: notice-service
+  profiles:
+    active: config
   config:
     import: "optional:configserver:http://10.0.16.245:8888/"
-  cloud:
-    config:
-      name: notice-service
-      profile: config
 
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   main:
     allow-bean-definition-overriding: true
