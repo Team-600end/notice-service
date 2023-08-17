@@ -4,8 +4,10 @@ import com.batton.noticeservice.domain.Notice;
 import com.batton.noticeservice.enums.NoticeType;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 public class GetNoticeResDTO {
     private Long contentId; // 프로젝트 id, 이슈 id, 릴리즈 노트 id 등
     private NoticeType noticeType;
